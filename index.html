@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<!--Zach Brown 30070355 October 23 2023-->
+<!--SENG 513 A2-->
+<!--Ga-->
+<html lang="en">
+  <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="style.css" />
+        <script src="script.js" defer></script>
+        <title>Quoridor Mini</title>
+    </head>
+    <body>
+        <h1>Quoridor Mini</h1>
+        <div class="buttons">
+            <img id="restart" src="assets/restart.png" onclick="restartGame()">
+            <img id="help" src="assets/help.png" onclick="helpMenu()">
+            
+        </div>
+        <div class="board">
+            
+            <div class="grid">
+                
+               
+                <div class="square" id="1a" onmouseover="possibleLocation(this)" onmouseout="removePosLocation()"></div>
+                <div class="wally" id="wally1a" onclick="placeWall(this.id)" onmouseover="highlightWall(this.id)" onmouseout="removeHighlightWall(this.id)"></div>
+                <div class="square" id="1b" onmouseover="possibleLocation(this)" onmouseout="removePosLocation()"></div>
+                <div class="wally" id="wally1b" onclick="placeWall(this.id)" onmouseover="highlightWall(this.id)" onmouseout="removeHighlightWall(this.id)"></div>
+                <div class="square" id="1c" onmouseover="possibleLocation(this)" onmouseout="removePosLocation()"></div>
+                <div class="wally" id="wally1c" onclick="placeWall(this.id)" onmouseover="highlightWall(this.id)" onmouseout="removeHighlightWall(this.id)"></div>
+                <div class="square" id="1d" onmouseover="possibleLocation(this)" onmouseout="removePosLocation()"></div>
+                <div class="wally" id="wally1d" onclick="placeWall(this.id)" onmouseover="highlightWall(this.id)" onmouseout="removeHighlightWall(this.id)"></div>
+                <div class="square" id="1e" onmouseover="possibleLocation(this)" onmouseout="removePosLocation()"></div>
+                <div class="wallx" id="wallx1a" onclick="placeWall(this.id)" onmouseover="highlightWall(this.id)" onmouseout="removeHighlightWall(this.id)"></div>
+                <div class="space"></div>
+                <div class="wallx" id="wallx1b" onclick="placeWall(this.id)" onmouseover="highlightWall(this.id)" onmouseout="removeHighlightWall(this.id)"></div>
+                <div class="space"></div>
+                <div class="wallx" id="wallx1c" onclick="placeWall(this.id)" onmouseover="highlightWall(this.id)" onmouseout="removeHighlightWall(this.id)"></div>
+                <div class="space"></div>
+                <div class="wallx" id="wallx1d" onclick="placeWall(this.id)" onmouseover="highlightWall(this.id)" onmouseout="removeHighlightWall(this.id)"></div>
+                <div class="space"></div>
+                <div class="wallx" id="wallx1e"></div>
+
+                <div class="square" id="2a" onmouseover="possibleLocation(this)" onmouseout="removePosLocation()"></div>
+                <div class="wally" id="wally2a" onclick="placeWall(this.id)" onmouseover="highlightWall(this.id)" onmouseout="removeHighlightWall(this.id)"></div>
+                <div class="square" id="2b" onmouseover="possibleLocation(this)" onmouseout="removePosLocation()"></div>
+                <div class="wally" id="wally2b" onclick="placeWall(this.id)" onmouseover="highlightWall(this.id)" onmouseout="removeHighlightWall(this.id)"></div>
+                <div class="square" id="2c" onmouseover="possibleLocation(this)" onmouseout="removePosLocation()"></div>
+                <div class="wally" id="wally2c" onclick="placeWall(this.id)" onmouseover="highlightWall(this.id)" onmouseout="removeHighlightWall(this.id)"></div>
+                <div class="square" id="2d" onmouseover="possibleLocation(this)" onmouseout="removePosLocation()"></div>
+                <div class="wally" id="wally2d" onclick="placeWall(this.id)" onmouseover="highlightWall(this.id)" onmouseout="removeHighlightWall(this.id)"></div>
+                <div class="square" id="2e" onmouseover="possibleLocation(this)" onmouseout="removePosLocation()"></div>
+                <div class="wallx" id="wallx2a" onclick="placeWall(this.id)" onmouseover="highlightWall(this.id)" onmouseout="removeHighlightWall(this.id)"></div>
+                <div class="space"></div>
+                <div class="wallx" id="wallx2b" onclick="placeWall(this.id)" onmouseover="highlightWall(this.id)" onmouseout="removeHighlightWall(this.id)"></div>
+                <div class="space"></div>
+                <div class="wallx" id="wallx2c" onclick="placeWall(this.id)" onmouseover="highlightWall(this.id)" onmouseout="removeHighlightWall(this.id)"></div>
+                <div class="space"></div>
+                <div class="wallx" id="wallx2d" onclick="placeWall(this.id)" onmouseover="highlightWall(this.id)" onmouseout="removeHighlightWall(this.id)"></div>
+                <div class="space"></div>
+                <div class="wallx" id="wallx2e"></div>
+
+
+                <div class="square" id="3a" onmouseover="possibleLocation(this)" onmouseout="removePosLocation()"></div>
+                <div class="wally" id="wally3a" onclick="placeWall(this.id)" onmouseover="highlightWall(this.id)" onmouseout="removeHighlightWall(this.id)"></div>
+                <div class="square" id="3b" onmouseover="possibleLocation(this)" onmouseout="removePosLocation()"></div>
+                <div class="wally" id="wally3b" onclick="placeWall(this.id)" onmouseover="highlightWall(this.id)" onmouseout="removeHighlightWall(this.id)"></div>
+                <div class="square" id="3c" onmouseover="possibleLocation(this)" onmouseout="removePosLocation()"></div>
+                <div class="wally" id="wally3c" onclick="placeWall(this.id)" onmouseover="highlightWall(this.id)" onmouseout="removeHighlightWall(this.id)"></div>
+                <div class="square" id="3d" onmouseover="possibleLocation(this)" onmouseout="removePosLocation()"></div>
+                <div class="wally" id="wally3d" onclick="placeWall(this.id)" onmouseover="highlightWall(this.id)" onmouseout="removeHighlightWall(this.id)"></div>
+                <div class="square" id="3e" onmouseover="possibleLocation(this)" onmouseout="removePosLocation()"></div>
+                <div class="wallx" id="wallx3a" onclick="placeWall(this.id)" onmouseover="highlightWall(this.id)" onmouseout="removeHighlightWall(this.id)"></div>
+                <div class="space"></div>
+                <div class="wallx" id="wallx3b" onclick="placeWall(this.id)" onmouseover="highlightWall(this.id)" onmouseout="removeHighlightWall(this.id)"></div>
+                <div class="space"></div>
+                <div class="wallx" id="wallx3c" onclick="placeWall(this.id)" onmouseover="highlightWall(this.id)" onmouseout="removeHighlightWall(this.id)"></div>
+                <div class="space"></div>
+                <div class="wallx" id="wallx3d" onclick="placeWall(this.id)" onmouseover="highlightWall(this.id)" onmouseout="removeHighlightWall(this.id)"></div>
+                <div class="space"></div>
+                <div class="wallx" id="wallx3e"></div>
+
+
+                <div class="square" id="4a" onmouseover="possibleLocation(this)" onmouseout="removePosLocation()"></div>
+                <div class="wally" id="wally4a" onclick="placeWall(this.id)" onmouseover="highlightWall(this.id)" onmouseout="removeHighlightWall(this.id)"></div>
+                <div class="square" id="4b" onmouseover="possibleLocation(this)" onmouseout="removePosLocation()"></div>
+                <div class="wally" id="wally4b" onclick="placeWall(this.id)" onmouseover="highlightWall(this.id)" onmouseout="removeHighlightWall(this.id)"></div>
+                <div class="square" id="4c" onmouseover="possibleLocation(this)" onmouseout="removePosLocation()"></div>
+                <div class="wally" id="wally4c" onclick="placeWall(this.id)" onmouseover="highlightWall(this.id)" onmouseout="removeHighlightWall(this.id)"></div>
+                <div class="square" id="4d" onmouseover="possibleLocation(this)" onmouseout="removePosLocation()"></div>
+                <div class="wally" id="wally4d" onclick="placeWall(this.id)" onmouseover="highlightWall(this.id)" onmouseout="removeHighlightWall(this.id)"></div>
+                <div class="square" id="4e" onmouseover="possibleLocation(this)" onmouseout="removePosLocation()"></div>
+                <div class="wallx" id="wallx4a" onclick="placeWall(this.id)" onmouseover="highlightWall(this.id)" onmouseout="removeHighlightWall(this.id)"></div>
+                <div class="space"></div>
+                <div class="wallx" id="wallx4b" onclick="placeWall(this.id)" onmouseover="highlightWall(this.id)" onmouseout="removeHighlightWall(this.id)"></div>
+                <div class="space"></div>
+                <div class="wallx" id="wallx4c" onclick="placeWall(this.id)" onmouseover="highlightWall(this.id)" onmouseout="removeHighlightWall(this.id)"></div>
+                <div class="space"></div>
+                <div class="wallx" id="wallx4d" onclick="placeWall(this.id)" onmouseover="highlightWall(this.id)" onmouseout="removeHighlightWall(this.id)"></div>
+                <div class="space"></div>
+                <div class="wallx" id="wallx4e"></div>
+
+
+                <div class="square" id="5a" onmouseover="possibleLocation(this)" onmouseout="removePosLocation()"></div>
+                <div class="wally" id="wally5a" ></div>
+                <div class="square" id="5b" onmouseover="possibleLocation(this)" onmouseout="removePosLocation()"></div>
+                <div class="wally" id="wally5b"></div>
+                <div class="square" id="5c" onmouseover="possibleLocation(this)" onmouseout="removePosLocation()"></div>
+                <div class="wally" id="wally5c"></div>
+                <div class="square" id="5d" onmouseover="possibleLocation(this)" onmouseout="removePosLocation()"></div>
+                <div class="wally" id="wally5d"></div>
+                <div class="square" id="5e" onmouseover="possibleLocation(this)" onmouseout="removePosLocation()"></div>
+            </div>
+                
+                
+                
+            
+
+        </div>
+        
+        <div class="ui">
+            <div class="player_info">
+                <p id="turn">Player 1's turn </p>
+                <p id="walls_left">Walls: </p>
+            </div>
+            
+            <div class="barges">
+
+                <img id="bargecharge" src="assets/bargecharge.png" onclick="charge()" onmouseout="displayDisabled()">
+                <img id="bargedisabled" src="assets/bargedisabled.png" onmouseover="displayCharge()">
+                <img id="barge" src="assets/barge.png" onclick="barge(this.id)">
+                <img id="bargehighlighted" src="assets/bargehighlighted.png" onclick="barge(this.id)">
+                
+                <img class="chargeanimation" src="Assets/chargeanimation1.png">
+                <img class="chargeanimation" src="Assets/chargeanimation2.png">
+                <img class="chargeanimation" src="Assets/chargeanimation3.png">
+                <img class="chargeanimation" src="Assets/chargeanimation4.png">
+                <img class="chargeanimation" src="Assets/chargeanimation5.png">
+                <img class="chargeanimation" src="Assets/chargeanimation6.png">
+                <img class="chargeanimation" src="Assets/chargeanimation7.png">
+                <img class="chargeanimation" src="Assets/chargeanimation8.png">
+                <img  class="chargeanimation" src="Assets/chargeanimation9.png">
+                
+                
+                <img class="wallanimation" src="Assets/wallanimation1.png">
+                <img class="wallanimation" src="Assets/wallanimation2.png">
+                <img class="wallanimation" src="Assets/wallanimation3.png">
+                <img class="wallanimation" src="Assets/wallanimation4.png">
+                <img class="wallanimation" src="Assets/wallanimation5.png">
+                <img class="wallanimation" src="Assets/wallanimation6.png">
+                <img class="wallanimation" src="Assets/wallanimation7.png">
+                <img class="wallanimation" src="Assets/wallanimation8.png">
+                <img class="wallanimation" src="Assets/wallanimation9.png">
+                <img class="wallanimation" src="Assets/wallanimation10.png">
+                <img class="wallanimation" src="Assets/wallanimation11.png">
+                <img class="wallanimation" src="Assets/wallanimation12.png">
+                <img class="wallanimation" src="Assets/wallanimation13.png">
+                <img class="wallanimation" src="Assets/wallanimation14.png">
+                <img class="wallanimation" src="Assets/wallanimation15.png">
+                <img class="wallanimation" src="Assets/wallanimation16.png">
+                <img class="wallanimation" src="Assets/wallanimation17.png">
+                <img class="wallanimation" src="Assets/wallanimation18.png">
+                <img class="wallanimation" src="Assets/wallanimation19.png">
+               
+                
+
+
+            </div>
+            
+                
+                
+        </div>
+
+        <div id="help_menu" class="menu" >
+            <div id="menu_text">
+                <img src="Assets/x.png" id="x" onclick="closeMenu()">
+                <p>Be the first player to reach the other side of the board. On your turn, you can do one of 3 moves:</p>
+                <ol>
+                    <li>Move player 1 space orthogonally</li>
+                    <li>Place a wall anywhere on the map as long as it doesn't completely block a path</li>
+                    <li>Charge up your barge attack which skips your turn. On your next turn you can break one wall permanently</li>
+                </ol>
+                
+            </div>
+            
+        </div>
+
+
+        
+        
+        
+        
+    </body>
+</html>
